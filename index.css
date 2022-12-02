@@ -140,7 +140,7 @@ img {
   -webkit-text-fill-color: transparent;
   animation: textclip 20s linear infinite;
   display: inline-block;
-      font-size: 90px;
+      font-size: 60px;
 }
 
 @keyframes textclip {
@@ -243,11 +243,22 @@ body:not(.user-is-tabbing) a:focus {
 .link:hover {
     color: var(--green);
 }
-
+.btn-touch{
+	top:16rem;
+	position:relative;
+	display:inline-block;
+	padding: 1.4rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid  var(--green);
+	border-radius:15px;
+    font-weight: 400;
+}
 .btn {
-    position: relative;
-    display: inline-block;
-    padding: 1rem 4.2rem;
+	
+	position:relative;
+	display:inline-block;
+	padding: 1.4rem;
     text-decoration: none;
     color: inherit;
     border: 1px solid  var(--green);
@@ -262,6 +273,50 @@ body:not(.user-is-tabbing) a:focus {
 	border-radius:15px;
     outline: none;
 }
+//
+
+.btn::after {
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background: var(--white);
+    height: 100%;
+    z-index: -1;
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+	
+	border-radius:15px;
+    right: 0;
+    background: var(--green);
+}
+
+.btn--green {
+	border-style:none;
+	border-radius:15px;
+    background: var(--green);
+    transition: all 0.2s;
+}
+
+.btn--green::after {
+	
+	border-radius:15px;
+    display: none;
+}
+
+.btn--green:hover,
+.btn--green:focus {
+	
+	border-radius:15px;
+    background: transparent;
+}
+
 
 .btn::after {
 
@@ -661,9 +716,90 @@ body:not(.user-is-tabbing) a:focus {
     width: 84px;
     transform: translateY(3px);
 }
+.title {
+
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 10vh;
+	letter-spacing: 1px;
+	line-height:2
+}
+
+h1 {
+	float:left;
+	
+	background-image: url(https://i.gifer.com/ItS.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	
+	font-size: 45px;
+	margin: 10px 0;
+}
+
+#contact{
+	display:flex;
+	justify-content:center;
+	padding: 5px 5px 5px 5px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.animate-charcter{
+		font-size: 45px;	
+	}
+h1 {
+	font-size: 25px;	
+}
+}
+
 
 @media(max-width: 500px) {
+	
     .footer {
         padding: var(--gutter-medium) 0;
     } 
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+	.animate-charcter{
+		font-size: 45px;	
+	}
+h1 {
+	font-size: 25px;	
+}
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.btn-touch{
+		top:16rem;
+	}
+	.animate-charcter{
+		font-size: 45px;	
+	}
+h1 {
+	font-size: 25px;	
+}
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {	
+.btn{
+		top:16rem;
+	}
+	.animate-charcter{
+		font-size: 45px;	
+	}
+h1 {
+	font-size: 25px;	
+}
 }
