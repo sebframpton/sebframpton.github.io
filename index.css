@@ -140,7 +140,7 @@ img {
   -webkit-text-fill-color: transparent;
   animation: textclip 20s linear infinite;
   display: inline-block;
-      font-size: 60px;
+      font-size: 70px;
 }
 
 @keyframes textclip {
