@@ -768,9 +768,7 @@ h1 {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
-	.animate-charcter{
-		font-size: 45px;	
-	}
+
 h1 {
 	font-size: 25px;	
 }
@@ -782,9 +780,7 @@ h1 {
 	.btn-touch{
 		top:16rem;
 	}
-	.animate-charcter{
-		font-size: 45px;	
-	}
+
 h1 {
 	font-size: 25px;	
 }
@@ -796,9 +792,7 @@ h1 {
 .btn{
 		top:16rem;
 	}
-	.animate-charcter{
-		font-size: 45px;	
-	}
+
 h1 {
 	font-size: 25px;	
 }
