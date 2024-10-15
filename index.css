@@ -114,6 +114,8 @@ section {
 img {
     object-fit: contain;
     max-width: 100%;
+    border: 0px solid;
+    border-radius: 25px
 }
 
 /* --------------------------------------- */
@@ -273,7 +275,7 @@ body:not(.user-is-tabbing) a:focus {
 	border-radius:15px;
     outline: none;
 }
-//
+
 
 .btn::after {
 
